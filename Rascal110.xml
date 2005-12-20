@@ -13,22 +13,23 @@ The reference datum for measurements is the tip of the nose.
 ************************************************************************
 -->
 
-<!-- 12lb mass includes engine, but not fuel (empty weight) -->
+<!-- 12 lb aircraft weight includes engine, but not fuel (empty weight) -->
 <airplane mass="12">
 
 <!-- Approach configuration -->
 <approach speed="15" aoa="5">
-  <control-setting axis="/controls/engines/engine[0]/throttle" value="0.00"/>
+  <control-setting axis="/controls/engines/engine[0]/throttle" value="0.10"/>
 </approach>
 
 <!-- Cruise configuration -->
-<cruise speed="65" alt="0">
+<cruise speed="65" alt="1000">
   <control-setting axis="/controls/engines/engine[0]/throttle" value="1.00"/>
-  <!-- <control-setting axis="/controls/flight/elevator-trim" value="0.1"/> -->
+  <control-setting axis="/controls/engines/engine[0]/mixture" value="1.00"/>
+  <control-setting axis="/controls/flight/elevator-trim" value="-0.3"/>
 </cruise>
 
 <!-- pilot's eyepoint -->
-<cockpit x="-0.48" y="0" z="0.10"/>
+<cockpit x="-0.48" y="0" z="0.30"/>
 
 <fuselage ax="0.00" ay="0.00" az="-0.05" bx="-1.93" by="0.00" bz="-0.05"
           width="0.30" taper="0.47" midpoint="0.58"/>
@@ -43,10 +44,10 @@ The reference datum for measurements is the tip of the nose.
   Note that the Rascal has no flaps.  With a stall speed of 10kt, who
   needs them?
 -->
-<wing x="-0.66" y="0.07" z="0.11" taper="0.73" incidence="2" twist="-2"
-      length="1.33" chord="0.41" sweep="0" dihedral="5" camber="0.1">
+<wing x="-0.66" y="0.07" z="0.11" taper="0.73" incidence="0" twist="-3"
+      length="1.33" chord="0.41" sweep="0" dihedral="5" camber="0.0">
   <stall aoa="15" width="4" peak="1.5"/>
-  <flap0 start=".40" end="0.95" lift="1.5" drag="1.4"/>
+  <flap0 start=".60" end="0.95" lift="1.3" drag="1.4"/>
   <control-input axis="/controls/flight/aileron" control="FLAP0" split="true"/>
   <control-input axis="/controls/flight/aileron-trim" control="FLAP0" split="true"/>
   <control-output control="FLAP0" side="left"
@@ -55,7 +56,7 @@ The reference datum for measurements is the tip of the nose.
 		  prop="/surface-positions/right-aileron-pos-norm"/>
 </wing>
 
-<hstab x="-1.80" y="0.03" z="0.00" taper="0.6" effectiveness="1.24"
+<hstab x="-1.80" y="0.03" z="0.00" taper="0.6" effectiveness="2.5"
        length="0.43" chord="0.18" sweep="0" incidence="0.00">
   <stall aoa="16" width="4" peak="1.5"/>
   <flap0 start="0" end="1" lift="1.4" drag="1.2"/>
@@ -76,11 +77,13 @@ The reference datum for measurements is the tip of the nose.
 </vstab>
 
 <propeller radius="0.23"
+           x="-0.10" y="0.00" z="0.00"
+           mass="3.5" moment="0.002"
 	   cruise-speed="65" cruise-rpm="7500"
            cruise-alt="2000" cruise-power="2"
-           takeoff-power="2.4" takeoff-rpm="7000"
-           eng-power="2.4" eng-rpm="7000"
-           x="-0.10" y="0.00" z="0.00" mass="3.5" moment="0.002">
+           takeoff-power="2.4" takeoff-rpm="7000">
+  <piston-engine eng-power="2.4" eng-rpm="7000"
+                 displacement="1.60"/>
   <actionpt x="0.00" y="0.00" z="0.00"/>
   <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
   <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
@@ -88,7 +91,7 @@ The reference datum for measurements is the tip of the nose.
   <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
 </propeller>
 
-<gear x="-1.93" y="0.00" z="-0.23" compression="0.01">
+<gear x="-1.93" y="0.00" z="-0.13" compression="0.01">
   <control-input axis="/controls/flight/rudder" control="STEER"
                  src0="-1.0" src1="1.0"
                  dst0="0.5" dst1="-0.5"/>
@@ -112,7 +115,7 @@ The reference datum for measurements is the tip of the nose.
   weight-and-balance page cited at the start.
 -->
 
-<!-- <ballast x="-4.0" y="0" z="-0.70" mass="-75"/> -->
+<ballast x="0.0" y="00" z="0.0" mass="1.2"/>
 
 <!-- pilot -->
 <!-- <weight x="-0.91" y="0" z="-0.70" -->

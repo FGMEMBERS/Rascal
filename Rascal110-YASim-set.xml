@@ -15,7 +15,7 @@ dynamics model, and external 3D model.
   <aircraft-version>noftp</aircraft-version>
 
   <flight-model>yasim</flight-model>
-  <aero>Rascal110</aero>
+  <aero>Rascal110-YASim</aero>
   <fuel-fraction>0.8</fuel-fraction>
   
   <systems>

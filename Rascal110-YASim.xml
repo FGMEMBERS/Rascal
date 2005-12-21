@@ -76,13 +76,14 @@ The reference datum for measurements is the tip of the nose.
 		  min="1" max="-1"/>
 </vstab>
 
+<!-- motor is reported to do 2.4 bhp but this way over powers the aircraft -->
 <propeller radius="0.23"
            x="-0.10" y="0.00" z="0.00"
-           mass="3.5" moment="0.01"
-	   cruise-speed="65" cruise-rpm="7500"
-           cruise-alt="2000" cruise-power="2"
-           takeoff-power="2.4" takeoff-rpm="7000">
-  <piston-engine eng-power="2.4" eng-rpm="7000"
+           mass="3.5" moment="0.001"
+	   cruise-speed="60" cruise-rpm="7500"
+           cruise-alt="2000" cruise-power="0.6"
+           takeoff-power="0.6" takeoff-rpm="7000">
+  <piston-engine eng-power="0.6" eng-rpm="7000"
                  displacement="1.60"/>
   <actionpt x="0.00" y="0.00" z="0.00"/>
   <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
@@ -108,7 +109,7 @@ The reference datum for measurements is the tip of the nose.
 </gear>
 
 <!-- There's just one 20 oz tank, right behind the engine (!!!) -->
-<tank x="-0.23" y="0.0" z="-0.08" capacity="0.16"/> 
+<tank x="-0.23" y="0.0" z="-0.08" capacity="1.00"/> 
 
 <!--
   Note the tandem seating; the x values (arms) come from the

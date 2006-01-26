@@ -61,8 +61,8 @@
             <static_friction> 0.8 </static_friction>
             <dynamic_friction> 0.5 </dynamic_friction>
             <rolling_friction> 0.02 </rolling_friction>
-            <spring_coeff unit="LBS/FT"> 13 </spring_coeff>
-            <damping_coeff unit="LBS/FT/SEC"> 2.6 </damping_coeff>
+            <spring_coeff unit="LBS/FT"> 120 </spring_coeff>
+            <damping_coeff unit="LBS/FT/SEC"> 20 </damping_coeff>
             <max_steer unit="DEG"> 0.0 </max_steer>
             <brake_group> LEFT </brake_group>
             <retractable>0</retractable>
@@ -76,8 +76,8 @@
             <static_friction> 0.8 </static_friction>
             <dynamic_friction> 0.5 </dynamic_friction>
             <rolling_friction> 0.02 </rolling_friction>
-            <spring_coeff unit="LBS/FT"> 13 </spring_coeff>
-            <damping_coeff unit="LBS/FT/SEC"> 2.6 </damping_coeff>
+            <spring_coeff unit="LBS/FT"> 120 </spring_coeff>
+            <damping_coeff unit="LBS/FT/SEC"> 20 </damping_coeff>
             <max_steer unit="DEG"> 0.0 </max_steer>
             <brake_group> RIGHT </brake_group>
             <retractable>0</retractable>
@@ -91,13 +91,14 @@
             <static_friction> 0.8 </static_friction>
             <dynamic_friction> 0.5 </dynamic_friction>
             <rolling_friction> 0.02 </rolling_friction>
-            <spring_coeff unit="LBS/FT"> 13 </spring_coeff>
-            <damping_coeff unit="LBS/FT/SEC"> 10.4 </damping_coeff>
+            <spring_coeff unit="LBS/FT"> 24 </spring_coeff>
+            <damping_coeff unit="LBS/FT/SEC"> 20 </damping_coeff>
             <max_steer unit="DEG"> 360.0 </max_steer>
             <brake_group> NONE </brake_group>
             <retractable>0</retractable>
         </contact>
     </ground_reactions>
+
     <propulsion>
         <engine file="Zenoah_G-26A">
             <location unit="IN">

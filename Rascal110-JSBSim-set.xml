@@ -14,6 +14,10 @@ dynamics model, and external 3D model.
   <author>Lee Elliot (3D)</author>
   <aircraft-version>noftp</aircraft-version>
 
+  <startup>
+    <splash-texture>Aircraft/Rascal/Rascal110-splash.rgb</splash-texture>
+  </startup>
+
   <flight-model>jsb</flight-model>
   <aero>Rascal110-JSBSim</aero>
   <fuel-fraction>0.8</fuel-fraction>

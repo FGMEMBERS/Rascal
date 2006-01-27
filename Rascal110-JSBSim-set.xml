@@ -11,8 +11,8 @@ dynamics model, and external 3D model.
  <sim>
 
   <description>Rascal 110 (R/C)</description>
-  <author>Lee Elliot (3D)</author>
-  <aircraft-version>noftp</aircraft-version>
+  <author>Lee Elliot (3D) Dave Culp (JSBsim dynamics) and Curt Olson</author>
+  <aircraft-version>0.1</aircraft-version>
 
   <startup>
     <splash-texture>Aircraft/Rascal/Rascal110-splash.rgb</splash-texture>

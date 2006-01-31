@@ -23,8 +23,11 @@ dynamics model, and external 3D model.
   <fuel-fraction>0.8</fuel-fraction>
   
   <systems>
+   <autopilot>
+    <path>Aircraft/Rascal/Systems/110-autopilot.xml</path>
+   </autopilot>
    <electrical>
-    <path>Aircraft/Rascal/rascal-electrical.xml</path>
+    <path>Aircraft/Rascal/Systems/electrical.xml</path>
    </electrical>
   </systems> 
 

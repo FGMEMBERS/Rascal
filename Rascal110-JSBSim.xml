@@ -47,7 +47,7 @@
         <location name="CG" unit="IN">
             <x> 36.4 </x>
             <y> 0 </y>
-            <z> 2 </z>
+            <z> 4 </z>
         </location>
     </mass_balance>
 
@@ -123,6 +123,7 @@
                     <pitch> 0.0 </pitch>
                     <yaw> 0.0 </yaw>
                 </orient>
+                <p_factor>1.0</p_factor>
             </thruster>
         </engine>
         <tank type="FUEL">    <!-- Tank number 0 --> 
@@ -302,6 +303,7 @@
         <axis name="ROLL">
             <function name="aero/coefficient/Clb">
                 <description>Roll_moment_due_to_beta</description>
+                <!-- aka dihedral effect -->
                 <product>
                     <property>aero/qbar-psf</property>
                     <property>metrics/Sw-sqft</property>
@@ -342,7 +344,7 @@
                       <table>
                           <independentVar>velocities/mach</independentVar>
                           <tableData>
-                              0.0000	0.1700	
+                              0.0000	0.1300	
                               2.0000	0.0570	
                           </tableData>
                       </table>
@@ -381,7 +383,7 @@
                       <table>
                           <independentVar>velocities/mach</independentVar>
                           <tableData>
-                              0.0000	-1.1000	
+                              0.0000	-0.5000	<!-- was -1.1 -->
                               2.0000	-0.2750	
                           </tableData>
                       </table>
@@ -450,7 +452,7 @@
                     <property>metrics/Sw-sqft</property>
                     <property>metrics/bw-ft</property>
                     <property>fcs/left-aileron-pos-rad</property>
-                    <value>-0.0500</value>
+                    <value>-0.0300</value>
                 </product>
             </function>
             <function name="aero/coefficient/Cndi">

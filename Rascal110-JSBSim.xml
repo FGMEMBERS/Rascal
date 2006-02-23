@@ -136,6 +136,7 @@
             <contents unit="LBS"> 1.5 </contents>
         </tank>
     </propulsion>
+
     <flight_control name="FCS: rascal">
      <channel name="All">
 
@@ -155,6 +156,19 @@
                 <max>0.3</max>
             </range>
             <output>fcs/elevator-pos-rad</output>
+        </aerosurface_scale>
+
+        <aerosurface_scale name="Elevator Normalized">
+            <input>fcs/elevator-pos-rad</input>
+            <domain>
+                <min>-0.3</min>
+                <max> 0.3</max>
+            </domain>
+            <range>
+                <min>-1</min>
+                <max> 1</max>
+            </range>
+            <output>fcs/elevator-pos-norm</output>
         </aerosurface_scale>
 
         <summer name="Roll Trim Sum">
@@ -184,6 +198,32 @@
             <output>fcs/right-aileron-pos-rad</output>
         </aerosurface_scale>
 
+        <aerosurface_scale name="Left aileron Normalized">
+            <input>fcs/left-aileron-pos-rad</input>
+            <domain>
+                <min>-0.35</min>
+                <max> 0.35</max>
+            </domain>
+            <range>
+                <min>-1</min>
+                <max> 1</max>
+            </range>
+            <output>fcs/left-aileron-pos-norm</output>
+        </aerosurface_scale>
+
+        <aerosurface_scale name="Right aileron Normalized">
+            <input>fcs/right-aileron-pos-rad</input>
+            <domain>
+                <min>-0.35</min>
+                <max> 0.35</max>
+            </domain>
+            <range>
+                <min>-1</min>
+                <max> 1</max>
+            </range>
+            <output>fcs/right-aileron-pos-norm</output>
+        </aerosurface_scale>
+
         <summer name="Rudder Command Sum">
             <input>fcs/rudder-cmd-norm</input>
             <input>fcs/yaw-trim-cmd-norm</input>
@@ -200,6 +240,19 @@
                 <max>0.35</max>
             </range>
             <output>fcs/rudder-pos-rad</output>
+        </aerosurface_scale>
+
+        <aerosurface_scale name="Rudder Normalized">
+            <input>fcs/rudder-pos-rad</input>
+            <domain>
+                <min>-0.35</min>
+                <max> 0.35</max>
+            </domain>
+            <range>
+                <min>-1</min>
+                <max> 1</max>
+            </range>
+            <output>fcs/rudder-pos-norm</output>
         </aerosurface_scale>
      </channel>
     </flight_control>

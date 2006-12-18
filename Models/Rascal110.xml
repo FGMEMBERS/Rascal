@@ -42,7 +42,7 @@
   <type>rotate</type>
   <object-name>Elevator</object-name>
   <property>/surface-positions/elevator-pos-norm</property>
-  <factor>25.0</factor> <!-- fixme -->
+  <factor>35.0</factor> <!-- fixme -->
   <center>
    <x-m>1.752</x-m>
    <y-m>0.0</y-m>
@@ -59,7 +59,7 @@
   <type>rotate</type>
   <object-name>Rudder</object-name>
   <property>/surface-positions/rudder-pos-norm</property>
-  <factor>20.0</factor> <!-- fixme -->
+  <factor>35.0</factor> <!-- fixme -->
   <center>
    <x-m>1.752</x-m>
    <y-m>0.0</y-m>

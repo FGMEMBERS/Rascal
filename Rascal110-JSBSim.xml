@@ -37,13 +37,13 @@
     </metrics>
 
     <mass_balance>
-        <ixx unit="SLUG*FT2"> 1 </ixx>
-        <iyy unit="SLUG*FT2"> 1 </iyy>
-        <izz unit="SLUG*FT2"> 2 </izz>
+        <ixx unit="SLUG*FT2"> 1.95 </ixx>
+        <iyy unit="SLUG*FT2"> 1.55 </iyy>
+        <izz unit="SLUG*FT2"> 1.91 </izz>
         <ixy unit="SLUG*FT2"> 0 </ixy>
         <ixz unit="SLUG*FT2"> 0 </ixz>
         <iyz unit="SLUG*FT2"> 0 </iyz>
-        <emptywt unit="LBS"> 12 </emptywt>
+        <emptywt unit="LBS"> 13 </emptywt>
         <location name="CG" unit="IN">
             <x> 36.4 </x>
             <y> 0 </y>
@@ -256,8 +256,8 @@
         </aerosurface_scale>
      </channel>
     </flight_control>
-    <aerodynamics>
 
+    <aerodynamics>
         <axis name="DRAG">
             <function name="aero/coefficient/CD0">
                 <description>Drag_at_zero_lift</description>

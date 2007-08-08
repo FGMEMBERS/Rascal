@@ -53,6 +53,11 @@ dynamics model, and external 3D model.
    </config>
   </view>
 
+  <submodels>
+    <serviceable type="bool">1</serviceable>
+    <path>Aircraft/Rascal/Rascal-submodels.xml</path>
+  </submodels>
+
   <view n="1">
    <config>
     <target-z-offset-m archive="y" type="double">0.5</target-z-offset-m>

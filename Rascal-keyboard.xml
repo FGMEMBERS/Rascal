@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <key n="83">
+    <name>S</name>
+    <desc>Toggle smoke</desc>
+    <binding>
+      <command>property-toggle</command>
+      <property>sim/multiplay/generic/int[0]</property>
+    </binding>
+  </key>
+
+</PropertyList>
+

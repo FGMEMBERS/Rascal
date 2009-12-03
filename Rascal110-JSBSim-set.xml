@@ -117,17 +117,64 @@ dynamics model, and external 3D model.
    </config>
   </view>
 
+  <view n="101">
+    <name>News Camera</name>
+    <type>lookat</type>
+    <internal type="bool">true</internal>
+    <config>
+      <eye-lat-deg-path>/position/latitude-deg</eye-lat-deg-path>
+      <eye-lon-deg-path>/position/longitude-deg</eye-lon-deg-path>
+      <eye-alt-ft-path>/position/altitude-ft</eye-alt-ft-path>
+      <eye-heading-deg-path>/orientation/heading-deg</eye-heading-deg-path>
+      <eye-pitch-deg-path>/orientation/pitch-deg</eye-pitch-deg-path>
+      <eye-roll-deg-path>/orientation/roll-deg</eye-roll-deg-path>
+      <x-offset-m>0.0</x-offset-m>
+      <y-offset-m>-0.35</y-offset-m>
+      <z-offset-m>-0.4</z-offset-m>
+
+      <target-lat-deg-path>/sim/input/click/latitude-deg</target-lat-deg-path>
+      <target-lon-deg-path>/sim/input/click/longitude-deg</target-lon-deg-path>
+      <target-alt-ft-path>/sim/input/click/elevation-ft</target-alt-ft-path>
+    </config>
+  </view>
+
+  <view n="102">
+    <name>Cockpit View</name>
+    <enabled type="bool" userarchive="y">true</enabled>
+    <type>lookfrom</type>
+    <internal type="bool">false</internal>
+    <config>
+      <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">55.0</default-field-of-view-deg>
+    </config>
+  </view>
+
+  <multiplay>
+    <chat_display>1</chat_display>
+    <generic>
+      <int type="bool">0</int>  <!-- smoke -->
+    </generic>
+  </multiplay>
+
   <help>
     <title>Rascal 110 (Sig Mfg)</title>
-    <line>Cruise speed: 60 mph</line>
-    <line>Never-exceed (Vne): 85 mph</line>
-    <line>Best Glide (Vglide): 20 mph</line>
-    <line>Maneuvering (Va): 50 mph</line>
-    <line>Approach speed: 15-25 mph</line>
-    <line>Stall speed (Vs): 10 mph</line>
+    <line>Cruise speed: 60 kts</line>
+    <line>Never-exceed (Vne): 85 kts</line>
+    <line>Best Glide (Vglide): 20 kts</line>
+    <line>Maneuvering (Va): 50 kts</line>
+    <line>Approach speed: 20-25 kts</line>
+    <line>Stall speed (Vs): 15 kts</line>
   </help>
 
  </sim>
+
+ <nasal>
+  <rascal>
+   <file>Aircraft/Rascal/Systems/main.nas</file>
+  </rascal>
+ </nasal>
 
  <yasim>
   <Rascal110>
@@ -135,6 +182,10 @@ dynamics model, and external 3D model.
   </Rascal110>
  </yasim>
 
+ <input>
+   <keyboard include="Rascal-keyboard.xml"/>
+ </input>
+         
  <controls>
   <flight>
    <aileron-trim>-0.01</aileron-trim>   <!-- fixed -->
@@ -146,7 +197,7 @@ dynamics model, and external 3D model.
     <magnetos>3</magnetos>
    </engine>
   </engines>
-  <door>1.0</door>
+  <smoke alias="/sim/multiplay/generic/int[0]"/>
  </controls>
 
  <engines>
@@ -155,18 +206,4 @@ dynamics model, and external 3D model.
   </engine>
  </engines>
   
- <!-- An autopilot on a Cub??? -->  
- <autopilot>
-   <config>
-     <min-climb-speed-kt type="float">48.0</min-climb-speed-kt>
-     <best-climb-speed-kt type="float">56.0</best-climb-speed-kt>
-     <target-climb-rate-fpm type="float">400.0</target-climb-rate-fpm>
-     <target-descent-rate-fpm type="float">1000.0</target-descent-rate-fpm>
-     <elevator-adj-factor type="float">6000.0</elevator-adj-factor>
-     <integral-contribution type="float">0.008</integral-contribution> 
-     <zero-pitch-throttle type="float">0.35</zero-pitch-throttle>
-     <zero-pitch-trim-full-throttle type="float">0.001</zero-pitch-trim-full-throttle>
-   </config>
- </autopilot>
-
 </PropertyList>

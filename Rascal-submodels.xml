@@ -5,7 +5,7 @@
   <submodel>
     <name>trajectory marker</name>
     <model>Aircraft/Rascal/Models/Trajectory-Marker.xml</model>
-    <trigger>ai/submodels/trajectory-markers</trigger>
+    <trigger>/sim/multiplay/generic/int[1]</trigger>
     <speed>0</speed>
     <repeat>true</repeat>
     <delay>0.75</delay>

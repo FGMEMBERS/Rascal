@@ -139,7 +139,7 @@ dynamics model, and external 3D model.
   </view>
 
   <view n="102">
-    <name>Cockpit View</name>
+    <name>Camera View</name>
     <enabled type="bool" userarchive="y">true</enabled>
     <type>lookfrom</type>
     <internal type="bool">false</internal>

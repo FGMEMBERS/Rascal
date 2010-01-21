@@ -23,8 +23,10 @@ var update_ugear = func( dt ) {
          and turret_enable.getBoolValue() )
     {
         var target_zoom = getprop("/ugear/act/channel6");
-        var target_pan = getprop("/ugear/act/channel7");
-	var target_tilt = getprop("/ugear/act/channel8");
+        var target_pan = -getprop("/ugear/act/channel7");
+        if ( target_pan < -180.0 ) { target_pan += 360.0; }
+        if ( target_pan > 180.0 ) { target_pan -= 360.0; }
+	var target_tilt = -getprop("/ugear/act/channel8");
 	var cur_zoom = getprop("/sim/current-view/field-of-view");
 	var cur_pan = getprop("/sim/current-view/heading-offset-deg");
 	var cur_tilt = getprop("/sim/current-view/pitch-offset-deg");

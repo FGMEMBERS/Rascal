@@ -2,8 +2,8 @@
 
 <PropertyList>
 
-  <key n="9">
-    <name>Ctrl-I</name>
+  <key n="61">
+    <name>=</name>
     <desc>Show configuration dialog</desc>
     <binding>
       <command>nasal</command>
